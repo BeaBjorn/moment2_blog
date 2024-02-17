@@ -1,0 +1,60 @@
+@* Links the view to the BlogModel *@
+@model moment2.Models.BlogModel;
+
+@* Sets page title by using ViewData *@
+@{
+    ViewData["title"] = "Add a blog post";
+}
+
+<div class="header-content">
+    @* Rendering te page title *@
+    <h2>@ViewData["title"]</h2>
+    <p>All blog posts added will be displayed on the home page for the website. </p>
+</div>
+
+@* An if statement checks if the key CountPosts exists in ViewData
+A variable named "totalPosts" holds the value of the key CountPosts and specefies this to be of type int
+If totalPosts isequal to 1 a specific message is displayed on the screen
+If totalPosts is more than one, anoter message is displayed on the screen
+If totalPosts holds any other value than the once specified in the above statements a third message is shown. *@
+@if (ViewData.ContainsKey("CountPosts"))
+{
+    var totalPosts = (int)ViewData["CountPosts"];
+
+    if (totalPosts == 1)
+    {
+        <p>There are currently 1 blog post displaying on the home page.</p>
+    }
+    else if (totalPosts > 1)
+    {
+        <p>There are currently @ViewData["CountPosts"] blog posts displaying on the home page.</p>
+    }
+    else
+    {
+        <p>There are no blog posts displaying on the home page.</p>
+    }
+}
+
+<div class="main-content">
+    @* A form using post to send post request
+    The TagHelper asp-validation-summary is used to display error messages linked to specific fields
+    TagHelpers are used to link the html-elements to the corresponding fields in the BlogModel *@
+
+    <form method="post">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+
+        <label asp-for="Title"></label><br />
+        <span asp-validation-for="Title"></span>
+        <input asp-for="Title"><br />
+
+        <label asp-for="Author"></label><br />
+        <span asp-validation-for="Author"></span>
+        <input asp-for="Author"><br />
+
+        <label asp-for="Post"></label><br />
+        <span asp-validation-for="Post"></span>
+        <textarea rows="10" cols="10" asp-for="Post"></textarea><br />
+
+        <input class="add-btn" type="submit" value="Add post">
+    </form>
+</div>

@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/beatricebjorn/Desktop/year_two/dotnet/moment2/hela_moment_2/moment2/wwwroot/css/main.css",
+      "PackagePath": "staticwebassets/css/main.css"
+    },
+    {
+      "Id": "/Users/beatricebjorn/Desktop/year_two/dotnet/moment2/hela_moment_2/moment2/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
+    },
+    {
+      "Id": "/Users/beatricebjorn/Desktop/year_two/dotnet/moment2/hela_moment_2/moment2/wwwroot/logo.svg",
+      "PackagePath": "staticwebassets/logo.svg"
+    },
+    {
+      "Id": "/Users/beatricebjorn/Desktop/year_two/dotnet/moment2/hela_moment_2/moment2/wwwroot/mvc_logo.svg",
+      "PackagePath": "staticwebassets/mvc_logo.svg"
+    },
+    {
+      "Id": "/Users/beatricebjorn/Desktop/year_two/dotnet/moment2/hela_moment_2/moment2/wwwroot/tuturu-dashboard.pdf",
+      "PackagePath": "staticwebassets/tuturu-dashboard.pdf"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.moment2.props",
+      "PackagePath": "build\\moment2.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.moment2.props",
+      "PackagePath": "buildMultiTargeting\\moment2.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.moment2.props",
+      "PackagePath": "buildTransitive\\moment2.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.moment2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

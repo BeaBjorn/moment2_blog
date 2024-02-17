@@ -1,0 +1,33 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 484 265" width="484" height="265">
+	<title>Group 65-svg</title>
+	<style>
+		.s0 { fill: #006d77 } 
+		.s1 { fill: #ffffff } 
+		.s2 { fill: none;stroke: #ffffff;stroke-width: 7 } 
+	</style>
+	<path id="Layer" class="s0" d="m0 6h484v249h-484z"/>
+	<g id="Layer">
+		<path id="Layer" class="s1" d="m108.8 91.3h10.5l24.7 60.3h0.9l24.7-60.3h10.5v72.7h-8.2v-55.3h-0.7l-22.8 55.3h-7.9l-22.7-55.3h-0.8v55.3h-8.2z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" class="s1" d="m191.5 55.5l45.5 128.2h1.3l45.4-128.2h13.9l-52.9 145.5h-14.2l-52.9-145.5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" class="s1" d="m358.3 114h-8.8q-0.8-3.8-2.7-6.7-1.9-2.9-4.7-4.8-2.7-2-6.1-3-3.3-1-6.9-1-6.6 0-12 3.4-5.3 3.3-8.5 9.8-3.1 6.5-3.1 15.9 0 9.5 3.1 16 3.2 6.5 8.5 9.8 5.4 3.4 12 3.4 3.6 0 6.9-1 3.4-1 6.1-3 2.8-2 4.7-4.9 1.9-2.9 2.7-6.6h8.8q-1 5.5-3.6 10-2.6 4.4-6.5 7.4-3.9 3.1-8.8 4.7-4.8 1.6-10.3 1.6-9.3 0-16.6-4.6-7.2-4.5-11.4-12.9-4.1-8.4-4.1-19.9 0-11.5 4.1-19.9 4.2-8.3 11.4-12.9 7.3-4.5 16.6-4.5 5.5 0 10.3 1.6 4.9 1.6 8.8 4.7 3.9 3 6.5 7.4 2.6 4.4 3.6 10z"/>
+	</g>
+	<path id="Layer" class="s2" d="m3.5 10.5h477v240h-477z"/>
+	<path id="Layer" class="s0" d="m44 238h397v26h-397z"/>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m44 128h102v5h-102z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m239 128h52v5h-52z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m135 153h241v5h-241z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m151 103h216v5h-216z"/>
+	</g>
+	<path id="Layer" class="s0" d="m44 0h397v21h-397z"/>
+</svg>

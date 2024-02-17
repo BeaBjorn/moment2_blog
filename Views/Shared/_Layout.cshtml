@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+    @* ViewData sets the title *@
+    <title>@ViewData["title"] | MVC - moment2</title>
+</head>
+
+<body>
+    <header>
+        @* Tag helpers (asp-controller and asp-action) is used in navigation to link to different views *@
+        <nav class="container">
+            <a class="logo" asp-controller="Home" asp-action="Index">
+                <img width=" 200" class="logo" src="~/logo.svg" alt="razor-logo">
+            </a>
+            <div class="nav-ul">
+                <div class="nav-item">
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a asp-controller="Home" asp-action="AddBlogPost">Add a blog post</a>
+                </div>
+                <div class="nav-item">
+                    <a asp-controller="Home" asp-action="About">A real blog post</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        @* Renders the body (content of the different views) *@
+        @RenderBody()
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>Created by: Beatrice Björn - Email: bebj2100@student.miun.se</p>
+        </div>
+
+    </footer>
+
+    <script src="~/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+@* Links view to model *@
+@model List<moment2.Models.BlogModel>
+
+@* Sets page title by using ViewData *@
+@{
+    ViewData["title"] = "Beas blog";
+}
+
+<div class="header-content">
+    @* Renders the page title *@
+    <h2>@ViewData["title"]</h2>
+
+    @* An if statement checks if the key CountPosts exists in ViewData
+    A variable named "totalPosts" holds the value of the key CountPosts and specefies this to be of type int
+    If totalPosts isequal to 1 a specific message is displayed on the screen
+    If totalPosts is more than one, anoter message is displayed on the screen
+    If totalPosts holds any other value than the once specified in the above statements a third message is shown. *@
+    @if (ViewData.ContainsKey("CountPosts"))
+    {
+        var totalPosts = (int)ViewData["CountPosts"];
+
+        if (totalPosts == 1)
+        {
+            <p>Here is 1 blog post rendered from an external json file.</p>
+        }
+        else if (totalPosts > 1)
+        {
+            <p>Here are @ViewData["CountPosts"] blog posts rendered from an external json file.</p>
+        }
+        else
+        {
+            <p>There are no blog posts available.</p>
+        }
+    }
+
+</div>
+
+@* If - statement checking if ViewBag.Success is not equal to null
+If so, the message stored in ViewBag.Success is shown on the screen
+If the first if-statement is not true the else if statement will run
+The else if statement checks if ViewBag.Delete is not equal to null
+If so, the message stored in ViewBag.Delete is shown on the screen *@
+@if (ViewBag.Success != null)
+{
+    <div class="success-message">@ViewBag.Success</div>
+}
+else if (ViewBag.Delete != null)
+{
+    <div class="delete-message">@ViewBag.Delete</div>
+}
+<div class="main-content">
+    @* An if-statement is used to check if there are any elements in the BlogModel list
+    If there are elements a foreach loop is used to loop through the elements in the list
+    @blog. followed by the name of the value is used to print different values to the screen
+    A form using the method post so send a post request
+    The action is setting the URL for "DeleteBlogPost" in the HomeController
+    The id of the URL is set to the id of the blog post associated with the form
+    A delete button is added with a type of submit to send the delete request *@
+
+    @* An else statement is used if there are no elements in the BlogModel list
+    If so, a message is displayed along with a link to the view where a user can add a blog post *@
+    @if (Model.Any())
+    {
+        @foreach (var blog in Model)
+        {
+            <div class="posts">
+                <h3>@blog.Title</h3>
+                Av: <i>@blog.Author - @blog.Date.ToString("dd MMM yyyy - HH:mm")</i>
+                <p>@blog.Post</p>
+
+                <form method="post" action="@Url.Action("DeleteBlogPost", "Home", new { id = blog.Id })">
+                    <input class="delete-btn" type="submit" value="Delete post">
+                </form>
+            </div>
+
+        }
+    }
+    else
+    {
+        <div class="no-posts">
+            <p>
+                There are no posts available. Go to
+                <a asp-controller="Home" asp-action="AddBlogPost">Add blog post</a>
+                to add a post.
+            </p>
+        </div>
+    }
+</div>
